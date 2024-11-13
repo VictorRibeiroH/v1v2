@@ -6,8 +6,8 @@ const font = Space_Grotesk({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
-  title: "nome | Design & Desenvolvimento",
-  description: "Faça seu negócio crescer com nome, um estúdio de design e desenvolvimento.",
+  title: "PowerLibs | Design & Desenvolvimento",
+  description: "Faça seu negócio crescer com a PowerLibs, um estúdio de design e desenvolvimento.",
 };
 
 export default function RootLayout({
