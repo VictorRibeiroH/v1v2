@@ -21,7 +21,7 @@ export default function Home() {
       >
         <Link href={"/"}>
           <Image 
-            src={'/logo/logo.webp'}
+            src={'/logo/logo.png'}
             alt="Logo"
             width={1000}
             height={1000}
