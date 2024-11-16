@@ -17,7 +17,7 @@ export function CoverDemo() {
       text-transparent 
       bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
       >
-       <Cover>PowerLibs</Cover> Seu Parceiro no Sucesso!
+       <Cover>PowerLibs</Cover> <br/> Seu Parceiro no Sucesso!
       </h1>
     </div>
   );

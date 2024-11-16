@@ -1,8 +1,9 @@
 "use client";
 
-import { AnimatedShinyTextDemo } from "@/components/demos/animated-shiny-text-demo";
 import { CoverDemo } from "@/components/demos/cover-demo";
 import BoxReveal from "@/components/ui/box-reveal";
+import { InfiniteMovingLogos } from "@/components/ui/infinite-moving-logos";
+import NumberTicker from "@/components/ui/number-ticker";
 import Image from "next/image";
 import Link from "next/link";
 import { PiCheckBold } from "react-icons/pi";
@@ -12,16 +13,18 @@ export default function Home() {
   return (
     <div
       className="
-   overflow-clip
-   inset-0
-   -z-10 h-full w-full bg-[#fafafa]
-   bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]
+  overflow-clip 
+ inset-0 
+ -z-10 h-full w-full bg-[#fafafa]
+  bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]
    bg-[size:14px_24px]
    "
     >
       <Element
         name="top"
-        className="overflow-hidden rounded-[6px] top-5 sticky md:mx-auto z-50 xl:w-4/5 2xl:w-[68%] bg-white flex items-center justify-between py-6 px-4 md:px-8 mx-6"
+        className="overflow-hidden rounded-[6px] top-5 sticky md:mx-auto z-50 
+   xl:w-4/5 2xl:w-[68%] bg-white flex items-center 
+   justify-between py-6 px-4 md:px-8 mx-6"
       >
         <Link href={"/"}>
           <Image
@@ -60,12 +63,12 @@ export default function Home() {
               smooth={true}
               className="hover:text-blue-500"
             >
-              Sobre nós
+              Sobre
             </ScrollLink>
           </div>
         </div>
 
-        <div className="flex ittems-center gap-x-4">
+        <div className="flex items-center gap-x-4">
           {/* <a href="tel:41988957399" className="hidden 2xl:flex">
             <button className="px-4 py-2 rounded-md flex items-center gap-x-3">
               41988957399
@@ -75,9 +78,9 @@ export default function Home() {
           <Link
             href={"/meeting"}
             className="
-          py-3
-          px-6  
-          text-lg
+           py-3 
+          px-6
+          text-lg 
           hover:bg-[#abcbff]
           rounded-[6px]
           border-2
@@ -88,20 +91,20 @@ export default function Home() {
           duration-200
           hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
           >
-            Agende uma chamada
+            Fale conosco
           </Link>
         </div>
       </Element>
 
       <main className="md:pb-10">
-        <div className="md:px-0 mx-6 xl:w4/5 2xl:w-[68%] md:mx-auto mt-14">
-          <AnimatedShinyTextDemo />
-        </div>
+        <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto mt-14">
+          {/* <AnimatedShinyTextDemo /> */}
         <h1>
           <CoverDemo />
         </h1>
 
-        <p className="md:text-center text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500">
+        <p className="md:text-center 
+        text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500">
           Agende uma reunião com nossa equipe e receba um orçamento em minutos
         </p>
 
@@ -130,7 +133,7 @@ export default function Home() {
        duration-200 
        hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
           >
-            Agende uma chamada
+              Fale conosco
           </Link>
           <Link
             href={"/showcase"}
@@ -177,6 +180,50 @@ export default function Home() {
                 Social Media
               </p>
             </BoxReveal>
+        </div>
+
+        <div className="md:flex items-center justify-between gap-y-4 my-10 gap-x-28 mx-auto">
+            <div className="md:w-2/5">
+              <h1 className="text-2xl font-medium text-gray-600 w-4/5">
+               Marcas de todo o país confiam em nossa agilidade
+              </h1>
+
+              <div className="flex my-6 gap-x-5 w-full">
+                <div>
+                  <h1 className="text-blue-500 text-3xl md:text-5xl">
+                    + <NumberTicker value={100} /> 
+                    <p className="text-gray-500 text-sm md:text-md">
+                      Clientes satisfeitos
+                    </p>
+                  </h1>
+                </div>
+
+                <div className="w-px bg-gray-300 self-stretch"></div>
+
+                <div className="flex-1 min-w-0">
+                  <h1 className="text-blue-500 text-3xl md:text-5xl whitespace-nowrap overflow-hidden">
+                    + <NumberTicker value={50} /> 
+                    <p className="text-gray-500 text-sm md:text-md">
+                      Projetos finalizados
+                    </p>
+                  </h1>
+                </div>
+              </div>
+            </div>
+
+            <section className="overflow-hidden mt-10 md:w/45">
+              <InfiniteMovingLogos 
+                speed="slow"
+                direction="left"
+                items={[
+                  {
+                    logo: "/logo/logo.png",
+                    name: "Logo",
+                  },
+                ]}
+              />
+            </section>
+        </div>
         </div>
 
       </main>
