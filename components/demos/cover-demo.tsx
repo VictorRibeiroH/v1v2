@@ -10,7 +10,7 @@ export function CoverDemo() {
       font-semibold 
       max-w-7xl 
       mx-auto 
-      text-center
+      md:text-center
       relative 
       z-20
       bg-clip-text 

@@ -1,6 +1,7 @@
 "use client";
 
 import { CoverDemo } from "@/components/demos/cover-demo";
+import { WordPullUpDemo } from "@/components/demos/wordl-pull-up-demo";
 import BoxReveal from "@/components/ui/box-reveal";
 import { InfiniteMovingLogos } from "@/components/ui/infinite-moving-logos";
 import NumberTicker from "@/components/ui/number-ticker";
@@ -8,6 +9,45 @@ import Image from "next/image";
 import Link from "next/link";
 import { PiCheckBold } from "react-icons/pi";
 import { Link as ScrollLink, Element } from "react-scroll";
+
+const services = [
+  {
+    icon: "/images/s_6.png",
+    title: "Web Design + Desenvolvimento",
+    description:
+      "Leve o seu negócio para o próximo nível com nossos serviços de web design e desenvolvimento",
+  },
+  {
+    icon: "/images/s_1.png",
+    title: "Search Engine Optimization",
+    description:
+      "Coloque seu site no topo dos resultados dos mecanismos de busca com nossos serviços de SEO",
+  },
+  {
+    icon: "/images/s_5.png",
+    title: "Criação de Conteúdo",
+    description:
+      "Aumente a presença online da sua marca com nossos serviços de marketing de mídia social",
+  },
+  {
+    icon: "/images/s_3.png",
+    title: "Social Media",
+    description:
+      "Interaja com seus clientes e aumente as vendas com nossos serviços de Email Marketing",
+  },
+  {
+    icon: "/images/s_4.png",
+    title: "Email Marketing",
+    description:
+      "Com nossos serviços de criação de conteúdo, ajudamos as empresas a gerar resultados",
+  },
+  {
+    icon: "/images/s_2.png",
+    title: "Tráfego pago",
+    description:
+      "Não desperdice dinheiro com publicidade ineficaz. Nossos serviços de PPC (pay-per-click) ajudam você a atingir seu público-alvo",
+  },
+];
 
 export default function Home() {
   return (
@@ -119,18 +159,17 @@ export default function Home() {
           <Link
             href="/meeting"
             className="py-3 
-            px-10
-            md:px-16
-      md:text-xl
-      hover:bg-[#abcbff] 
-      rounded-[6px]
-      border-2 
-      border-black 
-      dark:border-white 
-       bg-[#121212] 
-       text-white 
-       transition 
-       duration-200 
+           py-3 
+          px-6
+          text-lg 
+          hover:bg-[#abcbff]
+          rounded-[6px]
+          border-2
+          border-black
+          text-white
+          bg-[#121212]
+          transition
+          duration-200
        hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
           >
               Fale conosco
@@ -227,6 +266,37 @@ export default function Home() {
         </div>
 
       </main>
+
+      <Element name="services">
+        <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto">
+          <h1> 
+            <WordPullUpDemo />   
+          </h1>
+
+          <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
+          Todos os nossos serviços são projetados para ajudar o seu negócio a se destacar  
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="flex flex-col justify-between h-full space-y-4 text-center bg-gray-100 p-4 cursor-pointer hover:scale-105 transition-transform rounded-md"
+              >
+                <Image
+                  src={service.icon}
+                  width={10000}
+                  height={10000}
+                  className="object-contain bg-gray-100 p-4 w-full h-40 rounded-md"
+                  alt="image"
+                />
+                <h1 className="text-xl font-medium">{service.title}</h1>
+                <p className="text-gray-500">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Element>
     </div>
   );
 }
