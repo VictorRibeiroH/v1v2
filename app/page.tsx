@@ -1,6 +1,10 @@
 "use client";
 
+import { AnimatedBeamMultipleOutputDemo } from "@/components/demos/animated-beam-demo";
+import BoxRevealDemo from "@/components/demos/box-reveal-demo";
 import { CoverDemo } from "@/components/demos/cover-demo";
+import { ScrollBasedVelocityDemo } from "@/components/demos/scroll-based-velocity-demo";
+import { ShootingStarsAndStarsBackgroundDemo } from "@/components/demos/shooting-stars-demo";
 import { WordPullUpDemo } from "@/components/demos/wordl-pull-up-demo";
 import BoxReveal from "@/components/ui/box-reveal";
 import { InfiniteMovingLogos } from "@/components/ui/infinite-moving-logos";
@@ -33,13 +37,13 @@ const services = [
     icon: "/images/s_3.png",
     title: "Social Media",
     description:
-      "Interaja com seus clientes e aumente as vendas com nossos serviços de Email Marketing",
+      "Com nossos serviços de criação de conteúdo, ajudamos as empresas a gerar resultados",
   },
   {
     icon: "/images/s_4.png",
     title: "Email Marketing",
     description:
-      "Com nossos serviços de criação de conteúdo, ajudamos as empresas a gerar resultados",
+      "Interaja com seus clientes e aumente as vendas com nossos serviços de Email Marketing",
   },
   {
     icon: "/images/s_2.png",
@@ -103,7 +107,7 @@ export default function Home() {
               smooth={true}
               className="hover:text-blue-500"
             >
-              Sobre
+              Garantias
             </ScrollLink>
           </div>
         </div>
@@ -296,6 +300,57 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </Element>
+
+      <section className="py-20">
+            <ScrollBasedVelocityDemo />
+      </section>
+
+      <Element name="process">
+            <main className="md:px-0 mx-6 md:mx-auto">
+              <h1 className="text-3xl md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center">
+              Nosso {" "}
+                 
+              Processo
+              <span className="text-blue-500 flex gap-x-1 items-center">
+                    {" "}
+                    <Image 
+                      src={"/icons/squiggle.svg"}
+                      width={10000}
+                      height={10000}
+                      className="w-6"
+                      alt="image"
+                    />
+                    Criativo
+                    <Image 
+                      src={"/icons/star.svg"}
+                      width={10000}
+                      height={10000}
+                      className="w-6 mb-6"
+                      alt="image"
+                    />
+                  </span>{" "}
+              </h1>
+
+              <p className="text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
+              Nosso foco é dar visibilidade ao seu negócio.
+              </p>
+
+              <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 mx-auto">
+              
+                <div className="w-full md:w-1/2 order-2 md:order-1">
+                  <AnimatedBeamMultipleOutputDemo />
+                </div>
+
+                <div className="w-full md:w-1/2 order-1 md:order-2 md:ml-0"> 
+                  <BoxRevealDemo />
+                </div>
+              </div>
+            </main>
+      </Element>
+
+      <Element name="guarentees">
+            <ShootingStarsAndStarsBackgroundDemo />
       </Element>
     </div>
   );
