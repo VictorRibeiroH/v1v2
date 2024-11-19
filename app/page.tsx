@@ -275,7 +275,7 @@ export default function Home() {
                     name: "Ronaldo",
                   },
                   {
-                    logo: "/logo/VidaCard.png",
+                    logo: "/logo/Vidacard.png",
                     name: "VidaCard",
                   }
                 ]}
