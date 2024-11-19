@@ -24,7 +24,7 @@ const works = [
   {
     background: "bg-gray-200",
     imageUrl: "/images/Vidacard.png",
-    title: "VidaCard - Sant'Ana do Livramento",
+    title: "VidaCard - Livramento",
     link: "https://vidacardlivramento.com.br/"
   }
 
