@@ -267,7 +267,7 @@ export default function Home() {
                     name: "DMarks",
                   },
                   {
-                    logo: "/logo/Fini.webp",
+                    logo: "/logo/Fini.png",
                     name: "Fini"
                   },
                   {
@@ -275,7 +275,7 @@ export default function Home() {
                     name: "Ronaldo",
                   },
                   {
-                    logo: "/logo/VidaCard.webp",
+                    logo: "/logo/VidaCard.png",
                     name: "VidaCard",
                   }
                 ]}
