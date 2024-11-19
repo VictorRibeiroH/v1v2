@@ -23,7 +23,7 @@ const works = [
   },
   {
     background: "bg-gray-200",
-    imageUrl: "/images/Vidacard.png",
+    imageUrl: "/images/Vidacard.webp",
     title: "VidaCard - Livramento",
     link: "https://vidacardlivramento.com.br/"
   }
